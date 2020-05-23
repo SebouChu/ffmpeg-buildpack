@@ -16,7 +16,7 @@ cd $VENDOR_DIR
 echo "-----> Install ffmpeg ${FFMPEG_VERSION}"
 DOWNLOAD_URL="https://www.johnvansickle.com/ffmpeg/old-releases/ffmpeg-${FFMPEG_VERSION}-amd64-static.tar.xz"
 echo "ffmpeg DOWNLOAD_URL = ${DOWNLOAD_URL}" | indent
-curl -L --silent $DOWNLOAD_URL | tar x
+curl -J --silent $DOWNLOAD_URL | tar x
 
 echo "exporting PATH" | indent
 PROFILE_PATH="$BUILD_DIR/.profile.d/ffmpeg.sh"
