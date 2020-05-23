@@ -5,7 +5,7 @@ This project is a Scalingo [buildpack](http://doc.scalingo.com/buildpacks) for u
 
 It doesn't do anything else, you have to use it alongside another buildpack thanks to the [multi-buildpack](https://github.com/Scalingo/multi-buildpack).
 
-This buildpack provides a static build of the 2.8 version of FFmpeg downloaded from https://www.ffmpeg.org/download.html
+This buildpack provides a static build of the 4.2.1 version of FFmpeg downloaded from https://www.ffmpeg.org/download.html
 
 Usage
 -----
