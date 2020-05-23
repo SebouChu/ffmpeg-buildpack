@@ -38,14 +38,4 @@ $ scalingo run "ffmpeg -version"
 
 ## Need of ffprobe?
 
-Define the following environment variable and we'll install the binary `ffprobe` alongside `ffmpeg`
-
-```
-WITH_FFPROBE=true
-```
-
-Do it through Scalingo's dashboard or with their command line tool:
-
-```
-scalingo env-set WITH_FFPROBE=true
-```
+ffprobe is now included in the package.
