@@ -18,7 +18,7 @@ DOWNLOAD_URL="https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-sta
 echo "ffmpeg DOWNLOAD_URL = ${DOWNLOAD_URL}" | indent
 wget -q ${DOWNLOAD_URL}
 tar xf ffmpeg-release-amd64-static.tar.xz
-mv --verbose ffmpeg-release-amd64-static ffmpeg
+mv --verbose ffmpeg-${FFMPEG_VERSION}-amd64-static ffmpeg
 rm --verbose ffmpeg-release-amd64-static.tar.xz
 
 echo "exporting PATH" | indent
