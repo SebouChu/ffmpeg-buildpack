@@ -7,19 +7,19 @@ indent() {
 
 BUILD_DIR=$1
 VENDOR_DIR="vendor"
-FFMPEG_VERSION=${FFMPEG_VERSION:-"4.2.1"}
+FFMPEG_VERSION=${FFMPEG_VERSION:-"4.4.1"}
 
 cd $BUILD_DIR
 mkdir -p $VENDOR_DIR
 cd $VENDOR_DIR
 
 echo "-----> Install ffmpeg ${FFMPEG_VERSION}"
-DOWNLOAD_URL="https://www.johnvansickle.com/ffmpeg/old-releases/ffmpeg-${FFMPEG_VERSION}-amd64-static.tar.xz"
+DOWNLOAD_URL="https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz"
 echo "ffmpeg DOWNLOAD_URL = ${DOWNLOAD_URL}" | indent
 wget -q ${DOWNLOAD_URL}
-tar xf ffmpeg-${FFMPEG_VERSION}-amd64-static.tar.xz
-mv --verbose ffmpeg-${FFMPEG_VERSION}-amd64-static ffmpeg
-rm --verbose ffmpeg-${FFMPEG_VERSION}-amd64-static.tar.xz
+tar xf ffmpeg-release-amd64-static.tar.xz
+mv --verbose ffmpeg-release-amd64-static ffmpeg
+rm --verbose ffmpeg-release-amd64-static.tar.xz
 
 echo "exporting PATH" | indent
 PROFILE_PATH="$BUILD_DIR/.profile.d/ffmpeg.sh"
